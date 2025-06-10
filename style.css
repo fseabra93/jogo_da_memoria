@@ -1,0 +1,547 @@
+body {
+    font-family: "Roboto Mono", monospace;
+    min-height: 100px;
+    background-image: url("img/background_monstera-7687340_1280.jpg");
+    background-color: #000000;
+    background-size: 150vh;
+  
+    display: grid;
+    place-items: center; /* Centraliza nos dois eixos */
+ 
+    margin: 0;
+  }
+
+  .logo{
+    height: 200px;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+    text-shadow: 
+      -2px -2px 0px #000000, 
+      -2px 2px 0px #000000,                    
+      2px -2px 0px #000000,                  
+      2px 0px 0px #000000;
+    
+    /*5px 2px 0px #000000;*/
+  }
+
+  #nim1{
+    font-size: 4em;
+  }
+  
+  h1 {
+    text-align: center;
+    padding: 30px;
+    font-size: 5em;
+    text-shadow: 
+    -2px -2px 0px #000000, 
+    -2px 2px 0px #000000,                    
+    2px -2px 0px #000000,                  
+    2px 0px 0px #000000;
+  
+  /*5px 2px 0px #000000;*/
+    color: #6de6d5;
+    margin: 0 0 5px;
+  }
+
+  #titulo-principal{
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+    font-size: 4em;
+    text-shadow: 
+    -2px -2px 0px #000000, 
+    -2px 2px 0px #000000,                    
+    2px -2px 0px #000000,                  
+    2px 0px 0px #000000;
+  
+  /*5px 2px 0px #000000;*/
+    color: #ffffff;
+    margin: 0 0 5px;
+  }
+
+ /* #subtitulo{
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+    font-size: 2em;
+    text-shadow: 5px 2px 0px #000000;
+    color: #ffffff;
+    margin: 0 0 5px;
+  }*/
+  
+  .page-subtitle {
+    
+    color: #ffffff;
+    margin-top: 10px;
+    text-shadow: 
+    -2px -2px 0px #000000, 
+    -2px 2px 0px #000000,                    
+    2px -2px 0px #000000,                  
+    2px 0px 0px #000000;
+  
+  /*5px 2px 0px #000000;*/
+  }
+
+  p {
+    text-align: center;
+    padding: 0em;
+    font-size: 1em;
+    text-shadow: 5px 2px 0px #000000;
+    color: #d3eb68;
+  }
+
+  #interrocacao{
+    text-align: center;
+    padding: 0em;
+    font-size: 3em;
+    text-shadow: 5px 2px 0px #000000;
+    color: #6875eb;
+  }
+
+  .imagens1{
+    height: 600px;
+  }
+  
+  .page-logo {
+    width: 200px;
+  }
+  
+  .alura-logo {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  input {
+    margin: 12px;
+    padding: 6px;
+    border-radius: 5px;
+  }
+  
+  label {
+    color: white;
+  }
+  
+  button {
+    margin-top: 12px;
+    padding: 4px 8px;
+    border-radius: 10px;
+    padding: 15px 32px;
+    background: white;
+    font-size: 50px;
+    cursor: pointer;
+
+  }
+
+  .button2 {
+    text-align: center;
+    background-color: #4cafaf;
+    border-color: #ffffff;
+    border-style: solid;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-table;
+    font-size: 50px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+  }
+
+  #bact{
+    cursor: url("cur117.cur"), default;
+  }
+
+  #escada{
+    cursor: url("cur117.cur"), default;
+  }
+
+  #coxes{
+    display:none;
+    text-align: center;
+    
+  }
+
+  #cox1_button{
+    display:none;
+    text-align: center;
+    
+  }
+
+  #cox2_button{
+    display:none;
+    text-align: center;
+    
+  }
+
+  #mas_button{
+    display:none;
+    text-align: center;
+    ;
+  }
+
+  #risco_button{
+    display:none;
+    text-align: center;
+    
+  }
+
+  #outros_button{
+    display:none;
+    text-align: center;
+    
+  }
+
+  #nada_button{
+    display:none;
+    text-align: center;
+    
+  }
+
+  #peso{
+    border-style: double;
+    height: 30px;
+    width: 80px;
+    font-size: 30px;
+  }
+
+  #escada_button{
+    display:none;
+    text-align: center;
+    
+  }
+
+  #tylex_button{
+    display:none;
+    text-align: center;
+    
+  }
+
+  #tramal_button{
+    display:none;
+    text-align: center;
+    
+  }
+  
+
+  #rce_button{
+    display:none;
+    text-align: center;
+    
+  }
+
+  #bacteria_button{
+    display:none;
+    text-align: center;
+    
+  }
+
+  #gram_button{
+    display:none;
+    text-align: center;
+    
+  }
+
+  #leve_button{
+    display:none;
+    text-align: center;
+    
+  }
+
+  #profilaxia_button{
+    display:none;
+    text-align: center;
+    
+  }
+
+  #titulo_alternativo{
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+    text-shadow: 5px 2px 0px #000000;
+  }
+
+  #praque{
+    width: 1000px;
+    height: 100px;
+    margin-top: 12px;
+    padding: 4px 8px;
+    border-radius: 1px;
+    background: #ffffff;
+   
+  }
+  
+  h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+    font-size: 2em;
+    text-shadow: 
+    -2px -2px 0px #000000, 
+    -2px 2px 0px #000000,                    
+    2px -2px 0px #000000,                  
+    2px 0px 0px #000000;
+    
+    /*5px 2px 0px #000000;*/
+    margin: 0 0 5px;
+  }
+
+
+
+  a {
+    color:#ffffff;
+    text-decoration: normal;
+    text-shadow: 
+    -2px -2px 0px #000000, 
+    -2px 2px 0px #000000,                    
+    2px -2px 0px #000000,                  
+    2px 0px 0px #000000;
+  
+  /*5px 2px 0px #000000;*/
+
+  }
+
+  a:visited {
+    color: antiquewhite;
+    text-shadow: 
+    -2px -2px 0px #000000, 
+    -2px 2px 0px #000000,                    
+    2px -2px 0px #000000,                  
+    2px 0px 0px #000000;
+  
+  /*5px 2px 0px #000000;*/
+  }
+
+  a:hover {
+    text-decoration: underline;
+    text-shadow: 
+    -2px -2px 0px #000000, 
+    -2px 2px 0px #000000,                    
+    2px -2px 0px #000000,                  
+    2px 0px 0px #000000;
+  
+  /*5px 2px 0px #000000;*/
+  }
+
+  .tabela{
+    text-align: center;
+  }
+
+  .sub{
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+    font-size: 4em;
+    text-shadow: 
+    -2px -2px 0px #000000, 
+    -2px 2px 0px #000000,                    
+    2px -2px 0px #000000,                  
+    2px 0px 0px #000000;
+    
+    /*5px 2px 0px #000000;*/    color: #ffffff;
+    margin: 0 0 5px;
+  }
+
+  #med_cir {
+    text-align: center;
+    background-image: url("https://img1.wsimg.com/isteam/ip/a2dfd3e6-a5ca-4acf-b15e-7bea5443d2c0/5cdbeaa9-c585-470d-b45e-bb12faf5c991.png");
+    height: 800px;
+    width: 650px;
+  }
+ 
+  #med_cir:hover {
+    text-align: center;
+    background-image: url("https://www.researchgate.net/profile/Md-Khursid-Ansari/publication/350286689/figure/fig1/AS:1004169095823363@1616423977110/Figure-No-1-Medieval-period-physician-examining-Quaroorah.jpg");
+  }
+
+  .conclusao{
+    font: 'Roboto';
+    font-size: 3em;
+    color: #c8eb68;
+    text-shadow: 
+    -2px -2px 0px #000000, 
+    -2px 2px 0px #000000,                    
+    2px -2px 0px #000000,                  
+    2px 0px 0px #000000;
+  }
+
+
+  .dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+  .div-select {
+    width: 250px;
+    /* Tamanho final do select */
+    overflow: hidden;
+    /* Esconde o conteúdo que passar do tamanho especificado */
+}
+
+.seletor {
+    background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-select.gif) no-repeat #31b4ae;
+    /* Imagem de fundo (Seta) */
+    background-position: 205px center;
+    /*Posição da imagem do background*/
+    width: 270px;
+    /* Tamanho do select, maior que o tamanho da div "div-select" */
+    height: 58px;
+    /* altura do select, importante para que tenha a mesma altura em todo os navegadores */
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* Fonte do Select */
+    font-size: 30px;
+    /* Tamanho da Fonte */
+    padding: 13px 20px 13px 12px;
+    /* Configurações de padding para posicionar o texto no campo */
+    color: #fff;
+    /* Cor da Fonte */
+    text-indent: 0.01px;
+    /* Remove seta padrão do FireFox */
+    text-overflow: "";
+}
+
+/* Remove seta padrão do FireFox */
+.seletor::-ms-expand {
+    display: none;
+}
+/* Remove seta padrão do IE*/
+
+.styled-button {
+  /* Seus estilos de botão aqui */
+  background-color: #56a359; /* Exemplo */
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 36px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: black;
+  border-radius: 4px;
+}
+
+#btnInfo {
+    background-color: #4CAF50; /* Verde vibrante */
+    color: white;
+    padding: 12px 25px; /* Mais preenchimento para um botão maior */
+    border: none;
+    border-radius: 8px; /* Cantos arredondados */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Transições suaves */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+#btnInfo:hover {
+    background-color: #45a049; /* Escurece no hover */
+    transform: translateY(-2px); /* Pequeno efeito de "levantar" */
+}
+
+#btnInfo:active {
+    background-color: #3e8e41; /* Mais escuro ao clicar */
+    transform: translateY(0); /* Volta à posição original ao clicar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra menor ao clicar */
+}
+
+.game-board {
+    display: grid;
+    /* Grid 5x4 (5 colunas, 4 linhas) */
+    grid-template-columns: repeat(5, 100px); /* 5 colunas de 100px */
+    grid-template-rows: repeat(4, 100px);   /* 4 linhas de 100px */
+    gap: 10px;
+    perspective: 1000px; /* Para o efeito 3D de virar a carta */
+}
+
+.memory-card {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d; /* Permite que o lado de trás da carta seja visto */
+    transition: transform 0.5s; /* Transição suave ao virar */
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg); /* Vira a carta */
+}
+
+.front-face, .back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 8px;
+    backface-visibility: hidden; /* Esconde o lado de trás quando a carta está virada */
+}
+
+.front-face {
+    background-color: #fff; /* Fundo branco para as imagens da frente */
+    transform: rotateY(180deg); /* Inicia virada para a frente */
+}
+
+.back-face {
+    background-color: #6a6a6a; /* Cor para o verso da carta se não usar imagem */
+}
+
+.front-face img, .back-face img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    border-radius: 8px;
+}
+
+.reset-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+    background-color: #0056b3;
+}

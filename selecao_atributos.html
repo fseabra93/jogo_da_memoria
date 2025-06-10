@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Atributos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>
+        Seleção de Atributos
+    </h1>
+
+    <table>
+    <tr>
+        <td>
+            <select class="seletor" name="sexo" id="sexo">
+                <option value="invalido">Sexo</option>
+                <option value="masc">Masculino</option>
+                <option value="fem">Feminino</option>
+            </select>
+        </td>
+       
+        <td>
+            <select class="seletor" name="faixa_etaria" id="faixa_etaria">
+                <option value="invalido">Faixa Etária</option>
+                <option value="ate10">Até 10 anos</option>
+                <option value="10mais">Mais de 10 anos</option>
+
+            </select>
+        </td>
+
+        <td>
+            <input type="button" id="btnInfo" value="Carregar Jogo" onclick="carregar_jogo()"/>
+        </td>
+    
+    </tr>
+    </table>
+
+    <script src="script.js"></script>
+     
+</body>
+</html>

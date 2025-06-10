@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opióides</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Opióides</h1>
+
+    <button id="escada2" onclick="escada()">Escada</button>
+    
+
+    <input type="button" class="button2" value="Tylex" id="tylex" onclick="tylex()">
+    <input type="button" class="button2" value="Tramadol" id="tramal" onclick="tramal()">
+    <input type="button" class="button2" value="RCE" id="rce" onclick="rce()">
+    <button onclick="limpar2()"></button>
+
+    
+
+    <p>
+        <div id="escada_button">
+            <img src="escada.png"/>
+        </div> 
+        </p>
+    
+        <p>
+            <div id="tylex_button">
+                <img src="tylex.png"/>
+            </div> 
+        </p>
+    
+        <p>
+            <div id="tramal_button">
+                <img src="tramal.png"/>
+            </div> 
+        </p>
+
+        <p>
+            <div id="rce_button">
+                <img src="rce.jpg"/>
+            </div> 
+        </p>
+
+        <p id="opioides"></p>
+
+        <table>
+            <tr>
+                <td>
+                    <select class="seletor" name="medicamento_op" id="medicamento_op">
+                        <option value="">Medicamento</option>
+                        <option value="par">Tylex</option>
+                        <option value="dip">Tramadol</option>
+
+                    </select>
+                </td>
+               
+                <td>
+                    <select class="seletor" name="paciente_op" id="paciente_op">
+                        <option value="">Paciente</option>
+                        <option value="par">Adulto</option>
+                        <option value="dip">Criança</option>
+        
+                    </select>
+                </td>
+               
+                <td>
+                    <label>Peso:</label>
+                    <input type="number" id="peso_op">
+                </td>
+                <td>
+                    <input type="button" id="btnInfo" value="Posologia" onclick="posologia_op()"/>
+                </td>
+            
+            </tr>
+            </table>
+        
+            <p><h2 id="posologia_op"></h2></p>
+            <p><h2 id="ou_op"></h2></p>
+            <p><h2 id="posologia2_op"></h2></p>
+
+
+
+    <script src="script.js"></script>
+
+    <a href="preparar.html"><p>próximo</p></a>
+
+
+
+    
+</body>
+</html>
