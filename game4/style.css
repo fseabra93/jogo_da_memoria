@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap');
+
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Ribeye Marrow", serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,7 +14,8 @@ body {
 
 h1 {
     color: #333;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    font-size: 3em;
 }
 
 .game-board {
