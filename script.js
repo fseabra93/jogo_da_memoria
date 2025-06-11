@@ -140,17 +140,17 @@ function carregar_jogo() {
 
     // 2. Lógica de redirecionamento baseada nos VALUES
     if (sexo === "masc") {
-        if (faixa_etaria === "ate10") {
+        if (faixa_etaria === "crianca") {
             window.location.href = "game1/index.html";
-        } else if (faixa_etaria === "10mais") {
+        } else if (faixa_etaria === "adolesc") {
             window.location.href = "game2/index.html";
         }
         // Não há uma condição 'invalido' para faixa etária no HTML,
         // então não precisamos de um if para ela aqui, pois já validamos acima.
     } else if (sexo === "fem") { // Use else if para 'fem' para garantir que apenas uma ramificação seja executada
-        if (faixa_etaria === "ate10") {
+        if (faixa_etaria === "crianca") {
             window.location.href = "game3/index.html";
-        } else if (faixa_etaria === "10mais") {
+        } else if (faixa_etaria === "adolesc") {
             window.location.href = "game4/index.html";
         }
         // Não há uma condição 'invalido' para faixa etária no HTML
