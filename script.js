@@ -149,9 +149,9 @@ function carregar_jogo() {
         // então não precisamos de um if para ela aqui, pois já validamos acima.
     } else if (sexo === "fem") { // Use else if para 'fem' para garantir que apenas uma ramificação seja executada
         if (faixa_etaria === "ate10") {
-            window.location.href = "dor_pos.html";
+            window.location.href = "game3/index.html";
         } else if (faixa_etaria === "10mais") {
-            window.location.href = "nimesulida.html";
+            window.location.href = "game4/index.html";
         }
         // Não há uma condição 'invalido' para faixa etária no HTML
     } else {

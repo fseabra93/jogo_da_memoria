@@ -1,16 +1,16 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Verdana, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #5b7260;
     margin: 0;
 }
 
 h1 {
-    color: #333;
+    color: #fbf9f9;
     margin-bottom: 30px;
 }
 
