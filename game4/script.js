@@ -4,16 +4,16 @@ const resetButton = document.querySelector('.reset-button');
 // Array com os nomes das suas 10 imagens (coloque os nomes exatos dos seus arquivos)
 // Certifique-se de que essas imagens estejam na pasta 'images/'
 const cardImages = [
-    '1_4.png', // Exemplo: renomeie para os seus arquivos
-    '2_4.png',
-    '3_4.png',
-    '4_4.png',
-    '5_4.png',
-    '6_4.png',
-    '7_4.png',
-    '8_4.png',
-    '9_4.png',
-    '10_4.png'
+    'image1.png', // Exemplo: renomeie para os seus arquivos
+    'image2.png',
+    'image3.png',
+    'image4.png',
+    'image5.png',
+    'image6.png',
+    'image7.png',
+    'image8.png',
+    'image9.png',
+    'image10.png'
 ];
 
 const backCardImage = 'card-back.png'; // Nome da imagem do verso da carta
