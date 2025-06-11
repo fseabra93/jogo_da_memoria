@@ -16,26 +16,29 @@ h1 {
 
 .game-board {
     display: grid;
-    /* Grid 5x4 (5 colunas, 4 linhas) */
-    grid-template-columns: repeat(5, 100px); /* 5 colunas de 100px */
-    grid-template-rows: repeat(4, 100px);   /* 4 linhas de 100px */
-    gap: 10px;
-    perspective: 1000px; /* Para o efeito 3D de virar a carta */
+    /* Ajuste o tamanho das colunas e linhas aqui */
+    /* Exemplo para cartas maiores: 120px */
+    grid-template-columns: repeat(5, 150px); /* 5 colunas de 120px */
+    grid-template-rows: repeat(4, 150px);   /* 4 linhas de 120px */
+    gap: 15px; /* Opcional: aumente o espaçamento entre as cartas também */
+    perspective: 1000px;
 }
 
 .memory-card {
-    width: 100px;
-    height: 100px;
+    /* Ajuste a largura e altura da carta aqui */
+    /* Exemplo para cartas maiores: 120px */
+    width: 150px;
+    height: 150px;
     position: relative;
-    transform-style: preserve-3d; /* Permite que o lado de trás da carta seja visto */
-    transition: transform 0.5s; /* Transição suave ao virar */
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
     cursor: pointer;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .memory-card.flip {
-    transform: rotateY(180deg); /* Vira a carta */
+    transform: rotateY(180deg);
 }
 
 .front-face, .back-face {
@@ -43,22 +46,22 @@ h1 {
     height: 100%;
     position: absolute;
     border-radius: 8px;
-    backface-visibility: hidden; /* Esconde o lado de trás quando a carta está virada */
+    backface-visibility: hidden;
 }
 
 .front-face {
-    background-color: #fff; /* Fundo branco para as imagens da frente */
-    transform: rotateY(180deg); /* Inicia virada para a frente */
+    background-color: #fff;
+    transform: rotateY(180deg);
 }
 
 .back-face {
-    background-color: #6a6a6a; /* Cor para o verso da carta se não usar imagem */
+    background-color: #6a6a6a;
 }
 
 .front-face img, .back-face img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    object-fit: cover;
     border-radius: 8px;
 }
 
