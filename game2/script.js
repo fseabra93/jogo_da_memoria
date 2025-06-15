@@ -22,16 +22,16 @@ const backCardImage = 'card-back.png'; // Nome da imagem do verso da carta
 
 // --- NOVAS PERGUNTAS ---
 const questions = [
-    "Qual a capital do Brasil?",
-    "Quem pintou a Monalisa?",
-    "Qual o maior oceano do mundo?",
-    "Quantos planetas há no nosso sistema solar?",
-    "Qual o animal terrestre mais rápido?",
-    "Quem escreveu 'Dom Quixote'?",
-    "Qual elemento químico é simbolizado por 'O'?",
-    "Em que ano a internet foi criada para uso público?",
-    "Qual a montanha mais alta do mundo?",
-    "Qual o rio mais longo do mundo?"
+    "1. Qual a capital do Brasil?",
+    "2. Quem pintou a Monalisa?",
+    "3. Qual o maior oceano do mundo?",
+    "4. Quantos planetas há no nosso sistema solar?",
+    "5. Qual o animal terrestre mais rápido?",
+    "6. Quem escreveu 'Dom Quixote'?",
+    "7. Qual elemento químico é simbolizado por 'O'?",
+    "8. Em que ano a internet foi criada para uso público?",
+    "9. Qual a montanha mais alta do mundo?",
+    "10. Qual o rio mais longo do mundo?"
 ];
 // --- FIM DAS NOVAS PERGUNTAS ---
 
@@ -126,17 +126,26 @@ function disableCards() {
     secondCard.removeEventListener('click', flipCard);
 
     matchedPairs++;
-    
-    // --- CHAMADA DA NOVA FUNÇÃO ---
-    if (matchedPairs < cardImages.length) { // Mostra a pergunta se ainda não todos os pares foram encontrados
-        setTimeout(showQuestion, 500); // Mostra a pergunta após um pequeno atraso
+
+    if (matchedPairs < cardImages.length) {
+        // --- MODIFICAÇÃO AQUI ---
+        // Encontra o índice da imagem que formou o par
+        const imageFileName = firstCard.dataset.framework;
+        const imageIndex = cardImages.indexOf(imageFileName);
+        
+        // Se o índice for válido, mostra a pergunta correspondente
+        if (imageIndex !== -1 && imageIndex < questions.length) {
+            setTimeout(() => showQuestion(questions[imageIndex]), 500);
+        } else {
+            // Caso algo dê errado (imagem sem pergunta correspondente), apenas reseta o board
+            resetBoard(); 
+        }
+        // --- FIM DA MODIFICAÇÃO ---
     } else {
         setTimeout(() => alert('Parabéns! Você encontrou todos os pares!'), 500);
     }
-    // --- FIM DA CHAMADA ---
 
     resetBoard();
-    
 }
 
 // Função para desvirar as cartas (se forem diferentes)
@@ -158,12 +167,11 @@ function resetBoard() {
 
 // --- NOVAS FUNÇÕES PARA PERGUNTAS ---
 
-// Função para exibir uma pergunta aleatória
-function showQuestion() {
+// Função para exibir uma pergunta específica
+function showQuestion(questionToShow) {
     lockBoard = true; // Trava o jogo
-    const randomIndex = Math.floor(Math.random() * questions.length);
-    questionText.textContent = questions[randomIndex]; // Define o texto da pergunta
-    questionOverlay.style.display = 'flex'; // Torna a sobreposição visível (usando flexbox para centralizar)
+    questionText.textContent = questionToShow; // Define o texto da pergunta
+    questionOverlay.style.display = 'flex'; // Torna a sobreposição visível
 }
 
 // Função para esconder a pergunta e destravar o jogo
