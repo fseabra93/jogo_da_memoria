@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap');
 
 
 body {
-    font-family: "Ribeye Marrow", serif;
+    font-family: "Corinthia", cursive;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,6 +10,7 @@ body {
     min-height: 100vh;
     background-color: #f0f0f0;
     margin: 0;
+    font-size: 1.3em;
 }
 
 h1 {
