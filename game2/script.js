@@ -1,5 +1,7 @@
 const gameBoard = document.querySelector('.game-board');
 const resetButton = document.querySelector('.reset-button');
+const questionOverlay = document.querySelector('.question-overlay');
+const questionText = document.querySelector('.question-overlay p');
 
 // Array com os nomes das suas 10 imagens (coloque os nomes exatos dos seus arquivos)
 // Certifique-se de que essas imagens estejam na pasta 'images/'
@@ -17,6 +19,21 @@ const cardImages = [
 ];
 
 const backCardImage = 'card-back.png'; // Nome da imagem do verso da carta
+
+// --- NOVAS PERGUNTAS ---
+const questions = [
+    "Qual a capital do Brasil?",
+    "Quem pintou a Monalisa?",
+    "Qual o maior oceano do mundo?",
+    "Quantos planetas há no nosso sistema solar?",
+    "Qual o animal terrestre mais rápido?",
+    "Quem escreveu 'Dom Quixote'?",
+    "Qual elemento químico é simbolizado por 'O'?",
+    "Em que ano a internet foi criada para uso público?",
+    "Qual a montanha mais alta do mundo?",
+    "Qual o rio mais longo do mundo?"
+];
+// --- FIM DAS NOVAS PERGUNTAS ---
 
 let cards = [];
 let hasFlippedCard = false;
@@ -109,11 +126,17 @@ function disableCards() {
     secondCard.removeEventListener('click', flipCard);
 
     matchedPairs++;
-    resetBoard();
-
-    if (matchedPairs === cardImages.length) { // Se o número de pares encontrados for igual ao número de imagens únicas
+    
+    // --- CHAMADA DA NOVA FUNÇÃO ---
+    if (matchedPairs < cardImages.length) { // Mostra a pergunta se ainda não todos os pares foram encontrados
+        setTimeout(showQuestion, 500); // Mostra a pergunta após um pequeno atraso
+    } else {
         setTimeout(() => alert('Parabéns! Você encontrou todos os pares!'), 500);
     }
+    // --- FIM DA CHAMADA ---
+
+    resetBoard();
+    
 }
 
 // Função para desvirar as cartas (se forem diferentes)
@@ -133,11 +156,34 @@ function resetBoard() {
     [firstCard, secondCard] = [null, null];
 }
 
+// --- NOVAS FUNÇÕES PARA PERGUNTAS ---
+
+// Função para exibir uma pergunta aleatória
+function showQuestion() {
+    lockBoard = true; // Trava o jogo
+    const randomIndex = Math.floor(Math.random() * questions.length);
+    questionText.textContent = questions[randomIndex]; // Define o texto da pergunta
+    questionOverlay.style.display = 'flex'; // Torna a sobreposição visível (usando flexbox para centralizar)
+}
+
+// Função para esconder a pergunta e destravar o jogo
+function hideQuestion() {
+    questionOverlay.style.display = 'none'; // Esconde a sobreposição
+    lockBoard = false; // Destrava o jogo
+}
+
+// --- FIM DAS NOVAS FUNÇÕES ---
+
 // Evento para o botão de reiniciar
 resetButton.addEventListener('click', () => {
     resetBoard(); // Reseta as variáveis de estado
+    hideQuestion(); // Garante que a pergunta esteja escondida
     createBoard(); // Recria o tabuleiro com novas posições
 });
+
+// Evento para clicar na sobreposição da pergunta e escondê-la
+questionOverlay.addEventListener('click', hideQuestion); // Adiciona listener para fechar a pergunta
+
 
 // Inicializa o jogo ao carregar a página
 createBoard();
