@@ -16,7 +16,17 @@
 body {
     font-family: "Amatic SC", sans-serif;
     min-height: 100px;
-    background-image: url("img/background_monstera-7687340_1280.jpg");
+    /*background-image: url("img/background_monstera-7687340_1280.jpg");
+    /*background-image: url("img/pattern-5649403_1280.jpg");*/
+    background-image: url("img/pencils-2782840_1280.jpg");
+    background-size: cover; /* ESSENCIAL: Faz a imagem cobrir todo o espaço */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-position: center center; /* Centraliza a imagem */
+    /*background-attachment: fixed; /* Opcional: Fixa a imagem para que não role com o conteúdo */
+    min-height: 70vh; /* Garante que o elemento tenha pelo menos a altura da viewport */
+    /*margin: 0; /* Remove margens padrão do body */
+    padding: 0; /* Remove paddings padrão do body */
+
     background-color: #000000;
     background-size: 150vh;
   
@@ -328,7 +338,7 @@ body {
 }
 
 #btnInfo {
-    background-color: #4CAF50; /* Verde vibrante */
+    background-color: #4e4caf; /* Verde vibrante */
     color: white;
     padding: 12px 25px; /* Mais preenchimento para um botão maior */
     border: none;
@@ -346,7 +356,7 @@ body {
 }
 
 #btnInfo:hover {
-    background-color: #45a049; /* Escurece no hover */
+    background-color: #4592a0; /* Escurece no hover */
     transform: translateY(-2px); /* Pequeno efeito de "levantar" */
 }
 
