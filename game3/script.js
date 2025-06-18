@@ -22,7 +22,7 @@ const questions = [
     "Se você pudesse dizer uma coisa para essa pessoa, o que seria?",
     "Você acha que é certo rir ou se divertir?",
     "Você tem algum medo ou preocupação sobre o futuro?",
-    "10. Qual o rio mais longo do mundo?"
+    "O que você acha que ela gostaria que você soubesse ou fizesse agora?"
 ];
 
 // --- MUDANÇA AQUI: NOVO ARRAY PARA AS IMAGENS DAS PERGUNTAS ---
