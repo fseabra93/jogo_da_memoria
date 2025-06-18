@@ -14,7 +14,7 @@ const backCardImage = 'card-back.png';
 // Array de perguntas (mantido como está)
 const questions = [
     "Se você pudesse criar um desenho sobre como você está se sentindo agora, como seria?",
-    "Você acha que é certo rir ou se divertir_?",
+    "Você acha que é certo rir ou se divertir?",
     "Existe algo que te deixa muito triste ou bravo(a) sobre o que aconteceu?",
     "Existe algum jeito especial que você gostaria de lembrar da pessoa?",
     "O que você acha que ele/ela gostaria que você soubesse ou fizesse agora?",
