@@ -1,39 +1,46 @@
 const gameBoard = document.querySelector('.game-board');
 const resetButton = document.querySelector('.reset-button');
 const questionOverlay = document.querySelector('.question-overlay');
-const questionText = document.querySelector('.question-overlay p');
+// const questionText = document.querySelector('.question-overlay p'); // --- MUDANÇA AQUI --- Esta linha não é mais necessária
 
 // Array com os nomes das suas 10 imagens (coloque os nomes exatos dos seus arquivos)
-// Certifique-se de que essas imagens estejam na pasta 'images/'
 const cardImages = [
-    'image1.png', // Exemplo: renomeie para os seus arquivos
-    'image2.png',
-    'image3.png',
-    'image4.png',
-    'image5.png',
-    'image6.png',
-    'image7.png',
-    'image8.png',
-    'image9.png',
-    'image10.png'
+    'image1.png', 'image2.png', 'image3.png', 'image4.png', 'image5.png',
+    'image6.png', 'image7.png', 'image8.png', 'image9.png', 'image10.png'
 ];
 
-const backCardImage = 'card-back.png'; // Nome da imagem do verso da carta
+const backCardImage = 'card-back.png';
 
-// --- NOVAS PERGUNTAS ---
+// Array de perguntas (mantido como está)
 const questions = [
-    "1. Qual a capital do Brasil?",
-    "2. Quem pintou a Monalisa?",
-    "3. Qual o maior oceano do mundo?",
-    "4. Quantos planetas há no nosso sistema solar?",
-    "5. Qual o animal terrestre mais rápido?",
-    "6. Quem escreveu 'Dom Quixote'?",
-    "7. Qual elemento químico é simbolizado por 'O'?",
-    "8. Em que ano a internet foi criada para uso público?",
-    "9. Qual a montanha mais alta do mundo?",
-    "10. Qual o rio mais longo do mundo?"
+    "Como você quer manter a memória viva?",
+    "Existe algo que você gostaria de ter dito ou feito com ele/ela que não chegou a fazer?",
+    "Há algum lugar ou situação que te faz ter mais memórias? Como você reage?",
+    "O que ele/ela significava para você?",
+    "Se você pudesse mandar uma mensagem para ela agora, o que você diria?",
+    "Você se sente mais perto ou mais distante de amigos e familiares?",
+    "Você se sente mais triste, irritado, confuso?",
+    "Existe algo que as pessoas dizem ou fazem que não ajuda, ou até mesmo te magoa?",
+    "O que você gostaria que fosse diferente para que você pudesse lidar melhor com esse momento?",
+    "Você se sente confortável em falar com alguém sobre seus sentimentos?"
 ];
-// --- FIM DAS NOVAS PERGUNTAS ---
+
+// --- MUDANÇA AQUI: NOVO ARRAY PARA AS IMAGENS DAS PERGUNTAS ---
+// Associe cada imagem a uma pergunta. A ordem é importante!
+// A primeira imagem aqui corresponde à primeira pergunta, e assim por diante.
+const questionImages = [
+    'images/image1.png', // Imagem para a pergunta 1
+    'images/image2.png', // Imagem para a pergunta 2
+    'images/image3.png', // Imagem para a pergunta 3
+    'images/image4.png', // Imagem para a pergunta 4
+    'images/image5.png', // Imagem para a pergunta 5
+    'images/image6.png', // Imagem para a pergunta 6
+    'images/image7.png', // Imagem para a pergunta 7
+    'images/image8.png', // Imagem para a pergunta 8
+    'images/image9.png', // Imagem para a pergunta 9
+    'images/image10.png'      // Imagem para a pergunta 10
+];
+// Lembre-se de criar uma pasta "perguntas" dentro da sua pasta "images" ou ajustar os caminhos acima.
 
 let cards = [];
 let hasFlippedCard = false;
@@ -41,39 +48,28 @@ let lockBoard = false;
 let firstCard, secondCard;
 let matchedPairs = 0;
 
-// Função para embaralhar um array
 function shuffle(array) {
     let currentIndex = array.length, randomIndex;
-
-    // Enquanto houver elementos para embaralhar
     while (currentIndex !== 0) {
-        // Pega um elemento restante
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex--;
-
-        // E troca com o elemento atual
         [array[currentIndex], array[randomIndex]] = [
             array[randomIndex], array[currentIndex]];
     }
     return array;
 }
 
-// Função para criar o tabuleiro do jogo
 function createBoard() {
-    // Duplica as imagens para termos pares
     let gameImages = [...cardImages, ...cardImages];
-    // Embaralha as imagens
     gameImages = shuffle(gameImages);
-
-    gameBoard.innerHTML = ''; // Limpa o tabuleiro existente
-    matchedPairs = 0; // Reseta o contador de pares
-
-    cards = []; // Limpa o array de cartas
+    gameBoard.innerHTML = '';
+    matchedPairs = 0;
+    cards = [];
 
     gameImages.forEach(imageName => {
         const memoryCard = document.createElement('div');
         memoryCard.classList.add('memory-card');
-        memoryCard.dataset.framework = imageName; // Usamos o nome da imagem como identificador
+        memoryCard.dataset.framework = imageName;
 
         const frontFace = document.createElement('img');
         frontFace.classList.add('front-face');
@@ -87,60 +83,54 @@ function createBoard() {
 
         memoryCard.appendChild(frontFace);
         memoryCard.appendChild(backFace);
-
         memoryCard.addEventListener('click', flipCard);
         gameBoard.appendChild(memoryCard);
-        cards.push(memoryCard); // Adiciona a carta ao array de cartas
+        cards.push(memoryCard);
     });
 }
 
-// Função para virar a carta
 function flipCard() {
-    if (lockBoard) return; // Se o tabuleiro estiver travado, não faz nada
-    if (this === firstCard) return; // Impede clicar na mesma carta duas vezes
+    if (lockBoard) return;
+    if (this === firstCard) return;
 
     this.classList.add('flip');
 
     if (!hasFlippedCard) {
-        // Primeira carta virada
         hasFlippedCard = true;
         firstCard = this;
         return;
     }
 
-    // Segunda carta virada
     secondCard = this;
     checkForMatch();
 }
 
-// Função para verificar se as cartas são iguais
 function checkForMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
-
     isMatch ? disableCards() : unflipCards();
 }
 
-// Função para desabilitar as cartas (se forem iguais)
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
 
     matchedPairs++;
 
-    if (matchedPairs < cardImages.length) {
-        // --- MODIFICAÇÃO AQUI ---
-        // Encontra o índice da imagem que formou o par
+    if (matchedPairs <= cardImages.length) {
+        // --- MUDANÇA AQUI: LÓGICA PARA MOSTRAR PERGUNTA E IMAGEM ---
         const imageFileName = firstCard.dataset.framework;
         const imageIndex = cardImages.indexOf(imageFileName);
         
-        // Se o índice for válido, mostra a pergunta correspondente
-        if (imageIndex !== -1 && imageIndex < questions.length) {
-            setTimeout(() => showQuestion(questions[imageIndex]), 500);
+        if (imageIndex !== -1) {
+            // Pega a pergunta e a imagem correspondente usando o mesmo índice
+            const questionToShow = questions[imageIndex];
+            const imageToShow = questionImages[imageIndex];
+            
+            // Chama a nova função passando ambos os dados
+            setTimeout(() => showQuestionAndImage(questionToShow, imageToShow), 500);
         } else {
-            // Caso algo dê errado (imagem sem pergunta correspondente), apenas reseta o board
             resetBoard(); 
         }
-        // --- FIM DA MODIFICAÇÃO ---
     } else {
         setTimeout(() => alert('Parabéns! Você encontrou todos os pares!'), 500);
     }
@@ -148,50 +138,58 @@ function disableCards() {
     resetBoard();
 }
 
-// Função para desvirar as cartas (se forem diferentes)
 function unflipCards() {
-    lockBoard = true; // Trava o tabuleiro para que o jogador não clique em outras cartas
-
+    lockBoard = true;
     setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
         resetBoard();
-    }, 2000); // Vira as cartas de volta após 2 segundos
+    }, 1500); // Reduzi o tempo para 1.5s, 2s é um pouco longo
 }
 
-// Função para resetar as variáveis do tabuleiro
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 }
 
-// --- NOVAS FUNÇÕES PARA PERGUNTAS ---
+// --- MUDANÇA AQUI: FUNÇÃO TOTALMENTE REESCRITA ---
+// Função para exibir a pergunta E a imagem
+function showQuestionAndImage(question, imageUrl) {
+    lockBoard = true;
+    
+    // 1. Limpa qualquer conteúdo anterior do overlay
+    questionOverlay.innerHTML = ''; 
 
-// Função para exibir uma pergunta específica
-function showQuestion(questionToShow) {
-    lockBoard = true; // Trava o jogo
-    questionText.textContent = questionToShow; // Define o texto da pergunta
-    questionOverlay.style.display = 'flex'; // Torna a sobreposição visível
+    // 2. Cria o elemento <p> para a pergunta
+    const questionElement = document.createElement('p');
+    questionElement.textContent = question;
+
+    // 3. Cria o elemento <img> para a imagem
+    const imageElement = document.createElement('img');
+    imageElement.src = imageUrl;
+    imageElement.alt = "Imagem relacionada à pergunta"; // Boa prática de acessibilidade
+
+    // 4. Adiciona a pergunta e a imagem ao overlay
+    questionOverlay.appendChild(questionElement);
+    questionOverlay.appendChild(imageElement);
+
+    // 5. Mostra o overlay
+    questionOverlay.style.display = 'flex';
 }
 
-// Função para esconder a pergunta e destravar o jogo
+
+// Função para esconder a pergunta e destravar o jogo (mantida como está)
 function hideQuestion() {
-    questionOverlay.style.display = 'none'; // Esconde a sobreposição
-    lockBoard = false; // Destrava o jogo
+    questionOverlay.style.display = 'none';
+    lockBoard = false;
 }
 
-// --- FIM DAS NOVAS FUNÇÕES ---
-
-// Evento para o botão de reiniciar
 resetButton.addEventListener('click', () => {
-    resetBoard(); // Reseta as variáveis de estado
-    hideQuestion(); // Garante que a pergunta esteja escondida
-    createBoard(); // Recria o tabuleiro com novas posições
+    resetBoard();
+    hideQuestion();
+    createBoard();
 });
 
-// Evento para clicar na sobreposição da pergunta e escondê-la
-questionOverlay.addEventListener('click', hideQuestion); // Adiciona listener para fechar a pergunta
+questionOverlay.addEventListener('click', hideQuestion);
 
-
-// Inicializa o jogo ao carregar a página
 createBoard();

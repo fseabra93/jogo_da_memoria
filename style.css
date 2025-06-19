@@ -40,23 +40,7 @@ body {
     height: 200px;
   }
   
- /* .container {
-    text-align: center;
-    padding: 20px;
-    font-size: 2em;
-    text-shadow: 
-      -2px -2px 0px #000000, 
-      -2px 2px 0px #000000,                    
-      2px -2px 0px #000000,                  
-      2px 0px 0px #000000;
-    
-    /*5px 2px 0px #000000;
-  }
-
-  #nim1{
-    font-size: 4em;
-  }*/
-  
+ 
   h1 {
     font-family: "Amatic SC", sans-serif;
     text-align: center;
@@ -72,44 +56,7 @@ body {
     margin: 0 0 5px;
   }
 
-  /*#titulo-principal{
-    text-align: center;
-    padding: 20px;
-    height: 100vh;
-    font-size: 4em;
-    text-shadow: 
-    -2px -2px 0px #000000, 
-    -2px 2px 0px #000000,                    
-    2px -2px 0px #000000,                  
-    2px 0px 0px #000000;
-  
-  /*5px 2px 0px #000000;
-    color: #ffffff;
-    margin: 0 0 5px;
-  }*/
 
- /* #subtitulo{
-    text-align: center;
-    padding: 20px;
-    height: 100vh;
-    font-size: 2em;
-    text-shadow: 5px 2px 0px #000000;
-    color: #ffffff;
-    margin: 0 0 5px;
-  }*/
-  
- /* .page-subtitle {
-    
-    color: #ffffff;
-    margin-top: 10px;
-    text-shadow: 
-    -2px -2px 0px #000000, 
-    -2px 2px 0px #000000,                    
-    2px -2px 0px #000000,                  
-    2px 0px 0px #000000;
-  
-
-  }*/
 
   p {
     text-align: center;
@@ -119,21 +66,6 @@ body {
     color: #d3eb68;
   }
 
- /* #interrocacao{
-    text-align: center;
-    padding: 0em;
-    font-size: 3em;
-    text-shadow: 5px 2px 0px #000000;
-    color: #6875eb;
-  }
-
-  .imagens1{
-    height: 600px;
-  }
-  
-  .page-logo {
-    width: 200px;
-  }*/
   
 img.sombra-arredondada {
     width: 400px; /* Define a largura */
@@ -181,14 +113,11 @@ img.sombra-arredondada {
   }
 
   
- 
-  
   h2 {
     text-align: center;
-    color: #ffffff;
-    font-size: 30px;
-    font-size: 4em;
-    text-shadow: 
+    color: #000000;
+    font-size: 5em;
+    /*text-shadow: 
     -2px -2px 0px #000000, 
     -2px 2px 0px #000000,                    
     2px -2px 0px #000000,                  
