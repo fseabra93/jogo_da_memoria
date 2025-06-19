@@ -10,6 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap');
 
 
 
@@ -73,6 +74,9 @@ body {
     justify-content: space-between;
     height: 100%;
     min-height: 400px; /* Ajuste este valor conforme a altura da sua imagem */
+    font-family: "Sofadi One", system-ui;
+    font-size: 0.8em;
+
   }
   
 img.sombra-arredondada {
@@ -217,8 +221,8 @@ img.sombra-arredondada {
     width: 270px;
     height: 58px;
     border-radius: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    font-family: "Sofadi One", system-ui;
+    font-size: 2em;
     padding: 13px 20px 13px 12px;
     color: #fff;
     text-indent: 0.01px;
@@ -231,16 +235,18 @@ img.sombra-arredondada {
 }
 
 .seletor::-ms-expand {
-    display: none;
+    display:none;
 }
 
 #btnInfo {
-    background-color: #4e4caf;
+    background-color: #69a5d6;
     color: white;
     padding: 12px 25px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    font-family: "Sofadi One", system-ui;
+
     font-size: 20px;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.1s ease;
