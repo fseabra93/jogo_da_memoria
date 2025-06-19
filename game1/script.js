@@ -15,13 +15,13 @@ const backCardImage = 'card-back.png';
 const questions = [
     "Se você pudesse criar um desenho sobre como você está se sentindo agora, como seria?",
     "Você acha que é certo rir ou se divertir?",
-    "Existe algo que te deixa muito triste ou bravo(a) sobre o que aconteceu?",
+    "Existe algo que te deixa muito triste ou bravo sobre o que aconteceu?",
     "Existe algum jeito especial que você gostaria de lembrar da pessoa?",
     "O que você acha que ele/ela gostaria que você soubesse ou fizesse agora?",
     "O que você sabe sobre o que aconteceu?",
     "Qual sua lembrança favorita?",
     "Quem são as pessoas que você sente que podem te ajudar quando você está triste?",
-    "Se você pudesse dizer uma coisa para essa, o que seria?",
+    "Se você pudesse dizer uma coisa para essa pessoa, o que seria?",
     "Você tem algum medo ou preocupação sobre o futuro?"
 ];
 
@@ -116,7 +116,7 @@ function disableCards() {
 
     matchedPairs++;
 
-    if (matchedPairs < cardImages.length) {
+    if (matchedPairs <= cardImages.length) {
         // --- MUDANÇA AQUI: LÓGICA PARA MOSTRAR PERGUNTA E IMAGEM ---
         const imageFileName = firstCard.dataset.framework;
         const imageIndex = cardImages.indexOf(imageFileName);

@@ -16,7 +16,7 @@ const questions = [
     "O que você sabe sobre o que aconteceu?",
     "O que você gostaria de lembrar sobre a pessoa que se foi, mesmo quando estiver crescida?",
     "Se você pudesse criar um desenho sobre como você está se sentindo agora, como seria?",
-    "Existe algo que te deixa muito triste ou bravo(a) sobre o que aconteceu?",
+    "Existe algo que te deixa muito triste ou brava sobre o que aconteceu?",
     "Qual é a sua lembrança favorita?",
     "Quem são as pessoas que você sente que podem te ajudar quando você está triste?",
     "Se você pudesse dizer uma coisa para essa pessoa, o que seria?",
@@ -116,7 +116,7 @@ function disableCards() {
 
     matchedPairs++;
 
-    if (matchedPairs < cardImages.length) {
+    if (matchedPairs <= cardImages.length) {
         // --- MUDANÇA AQUI: LÓGICA PARA MOSTRAR PERGUNTA E IMAGEM ---
         const imageFileName = firstCard.dataset.framework;
         const imageIndex = cardImages.indexOf(imageFileName);
