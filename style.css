@@ -15,25 +15,20 @@
 
 body {
     font-family: "Amatic SC", sans-serif;
-    min-height: 100px;
-    /*background-image: url("img/background_monstera-7687340_1280.jpg");
-    /*background-image: url("img/pattern-5649403_1280.jpg");*/
+    min-height: 100vh;
     background-image: url("img/pencils-2782840_1280.jpg");
-    background-size: cover; /* ESSENCIAL: Faz a imagem cobrir todo o espaço */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
-    background-position: center center; /* Centraliza a imagem */
-    /*background-attachment: fixed; /* Opcional: Fixa a imagem para que não role com o conteúdo */
-    min-height: 70vh; /* Garante que o elemento tenha pelo menos a altura da viewport */
-    /*margin: 0; /* Remove margens padrão do body */
-    padding: 0; /* Remove paddings padrão do body */
-
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     background-color: #000000;
-    background-size: 150vh;
   
-    display: grid;
-    place-items: center; /* Centraliza nos dois eixos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
  
     margin: 0;
+    padding: 0;
   }
 
   .logo{
@@ -44,19 +39,16 @@ body {
   h1 {
     font-family: "Amatic SC", sans-serif;
     text-align: center;
-    padding: 30px;
+    padding: 0.1em;
     font-size: 7em;
     text-shadow: 
     -2px -2px 0px #000000, 
     -2px 2px 0px #000000,                    
     2px -2px 0px #000000,                  
     2px 0px 0px #000000;
-    /*5px 2px 0px #000000;*/
     color: #6de6d5;
-    margin: 0 0 5px;
+    margin: 0 0 0.2em;
   }
-
-
 
   p {
     text-align: center;
@@ -66,10 +58,26 @@ body {
     color: #d3eb68;
   }
 
+  .content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 10px;
+    max-width: 90%; 
+    justify-content: center;
+  }
+
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 400px; /* Ajuste este valor conforme a altura da sua imagem */
+  }
   
 img.sombra-arredondada {
-    width: 400px; /* Define a largura */
-    height: auto; /* Mantém a proporção */
+    width: 400px;
+    height: auto;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
@@ -84,20 +92,7 @@ img.sombra-arredondada {
     color: white;
   }
   
-  button {
-    margin-top: 12px;
-    padding: 4px 8px;
-    border-radius: 10px;
-    padding: 15px 32px;
-    background: white;
-    font-size: 50px;
-    cursor: pointer;
-    
-
-  }
-
-  .button2 {
-    text-align: center;
+  .styled-button {
     background-color: #4cafaf;
     border-color: #ffffff;
     border-style: solid;
@@ -105,29 +100,29 @@ img.sombra-arredondada {
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-table;
-    font-size: 50px;
-    margin: 4px 2px;
+    display: block; /* Alterado para 'block' para ocupar a largura total e permitir margin automático */
+    font-size: 2.6em;
+    margin: 5px auto; /* Centraliza o botão e adiciona margem vertical */
     cursor: pointer;
-
+    border-radius: 10px;
+    
+    /* --- NOVA PROPRIEDADE PARA LARGURA FIXA --- */
+    width: 300px; /* Defina uma largura fixa aqui (ex: 300px). Ajuste conforme necessário. */
+    /* --- FIM DA NOVA PROPRIEDADE --- */
   }
 
+  .styled-button:hover {
+    background-color: #1d5555;
+    
+}
   
   h2 {
+    font-family: "Amatic SC", sans-serif;
     text-align: center;
     color: #000000;
     font-size: 5em;
-    /*text-shadow: 
-    -2px -2px 0px #000000, 
-    -2px 2px 0px #000000,                    
-    2px -2px 0px #000000,                  
-    2px 0px 0px #000000;
-    
-    /*5px 2px 0px #000000;*/
     margin: 0 0 5px;
   }
-
-
 
   a {
     color:#ffffff;
@@ -137,9 +132,6 @@ img.sombra-arredondada {
     -2px 2px 0px #000000,                    
     2px -2px 0px #000000,                  
     2px 0px 0px #000000;
-  
-  /*5px 2px 0px #000000;*/
-
   }
 
   a:visited {
@@ -149,8 +141,6 @@ img.sombra-arredondada {
     -2px 2px 0px #000000,                    
     2px -2px 0px #000000,                  
     2px 0px 0px #000000;
-  
-  /*5px 2px 0px #000000;*/
   }
 
   a:hover {
@@ -160,8 +150,6 @@ img.sombra-arredondada {
     -2px 2px 0px #000000,                    
     2px -2px 0px #000000,                  
     2px 0px 0px #000000;
-  
-  /*5px 2px 0px #000000;*/
   }
 
   .tabela{
@@ -178,8 +166,7 @@ img.sombra-arredondada {
     -2px 2px 0px #000000,                    
     2px -2px 0px #000000,                  
     2px 0px 0px #000000;
-    
-    /*5px 2px 0px #000000;*/    color: #ffffff;
+    color: #ffffff;
     margin: 0 0 5px;
   }
 
@@ -221,9 +208,7 @@ img.sombra-arredondada {
 
   .div-select {
     width: 250px;
-    /* Tamanho final do select */
     overflow: hidden;
-    /* Esconde o conteúdo que passar do tamanho especificado */
 }
 
 .seletor {
@@ -245,38 +230,21 @@ img.sombra-arredondada {
     1px 0px 0px #000000;
 }
 
-/* Remove seta padrão do FireFox */
 .seletor::-ms-expand {
     display: none;
 }
-/* Remove seta padrão do IE*/
-
-.styled-button {
-  /* Seus estilos de botão aqui */
-  background-color: #56a359; /* Exemplo */
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 36px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border: black;
-  border-radius: 4px;
-}
 
 #btnInfo {
-    background-color: #4e4caf; /* Verde vibrante */
+    background-color: #4e4caf;
     color: white;
-    padding: 12px 25px; /* Mais preenchimento para um botão maior */
+    padding: 12px 25px;
     border: none;
-    border-radius: 8px; /* Cantos arredondados */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    font-size: 20px; /* Tamanho da fonte */
-    font-weight: bold; /* Negrito */
-    transition: background-color 0.3s ease, transform 0.1s ease; /* Transições suaves */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35); /* Sombra mais forte e ampla */
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
     text-shadow: 
     -1px -1px 0px #000000, 
     -1px 1px 0px #000000,                    
@@ -285,76 +253,12 @@ img.sombra-arredondada {
 }
 
 #btnInfo:hover {
-    background-color: #4592a0; /* Escurece no hover */
-    transform: translateY(-2px); /* Pequeno efeito de "levantar" */
+    background-color: #4592a0;
+    transform: translateY(-2px);
 }
 
 #btnInfo:active {
-    background-color: #3e8e41; /* Mais escuro ao clicar */
-    transform: translateY(0); /* Volta à posição original ao clicar */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra menor ao clicar */
+    background-color: #3e8e41;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-/*
-.game-board {
-    display: grid;
-    /* Grid 5x4 (5 colunas, 4 linhas) 
-    grid-template-columns: repeat(5, 100px); /* 5 colunas de 100px 
-    grid-template-rows: repeat(4, 100px);   /* 4 linhas de 100px 
-    gap: 10px;
-    perspective: 1000px; /* Para o efeito 3D de virar a carta 
-}
-
-.memory-card {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    transform-style: preserve-3d; /* Permite que o lado de trás da carta seja visto 
-    transition: transform 0.5s; /* Transição suave ao virar 
-    cursor: pointer;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.memory-card.flip {
-    transform: rotateY(180deg); /* Vira a carta 
-}
-
-.front-face, .back-face {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    border-radius: 8px;
-    backface-visibility: hidden; /* Esconde o lado de trás quando a carta está virada 
-}
-
-.front-face {
-    background-color: #fff; /* Fundo branco para as imagens da frente 
-    transform: rotateY(180deg); /* Inicia virada para a frente 
-}
-
-.back-face {
-    background-color: #6a6a6a; /* Cor para o verso da carta se não usar imagem 
-}
-
-.front-face img, .back-face img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção 
-    border-radius: 8px;
-}
-
-.reset-button {
-    margin-top: 30px;
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.reset-button:hover {
-    background-color: #0056b3;
-}*/
