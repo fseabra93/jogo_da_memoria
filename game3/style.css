@@ -13,7 +13,7 @@ body {
     margin: 0;
 
         /* --- NOVAS PROPRIEDADES PARA A IMAGEM DE FUNDO --- */
-    background-image: url("images/fundogarota.png"); /* Caminho para sua imagem */
+    background-image: url("images/fundoMENINA.jpg"); /* Caminho para sua imagem */
     background-size: cover; /* Faz a imagem cobrir todo o espaço, mantendo a proporção */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     background-position: center center; /* Centraliza a imagem no meio da tela */

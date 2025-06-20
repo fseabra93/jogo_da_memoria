@@ -16,7 +16,7 @@ const questions = [
     "Se você pudesse criar um desenho sobre como você está se sentindo agora, como seria?",
     "Você acha que é certo rir ou se divertir?",
     "Existe algo que te deixa muito triste ou bravo sobre o que aconteceu?",
-    "Existe algum jeito especial que você gostaria de lembrar da pessoa?",
+    "Existe algum jeito especial que você gostaria de lembrar dessa pessoa?",
     "O que você acha que ele/ela gostaria que você soubesse ou fizesse agora?",
     "O que você sabe sobre o que aconteceu?",
     "Qual sua lembrança favorita?",
