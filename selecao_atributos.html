@@ -8,37 +8,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>
-        Seleção de Atributos
-    </h1>
-
-    <table>
-    <tr>
-        <td>
-            <select class="seletor" name="sexo" id="sexo">
-                <option value="invalido">Sexo</option>
-                <option value="masc">Masculino</option>
-                <option value="fem">Feminino</option>
-            </select>
-        </td>
-       
-        <td>
-            <select class="seletor" name="faixa_etaria" id="faixa_etaria">
-                <option value="invalido">Faixa Etária</option>
-                <option value="crianca">Criança</option>
-                <option value="adolesc">Adolescente</option>
-
-            </select>
-        </td>
-
-        <td>
-            <input type="button" id="btnInfo" value="Carregar Jogo" onclick="carregar_jogo()"/>
-        </td>
-    
-    </tr>
-    </table>
+    <header id="cabecalho-principal">
+        <h1 id="titulo-pagina-seletor">
+            Seleção de Atributos
+        </h1>
+        <div id="seletor-container">
+            <table>
+                <tr>
+                    <td>
+                        <select class="seletor" name="selecionar" id="sexo">
+                            <option value="invalido">Selecionar</option>
+                            <option value="menina">Menina</option>
+                            <option value="menino">Menino</option>
+                            <option value="garota">Garota</option>
+                            <option value="garoto">Garoto</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="button" id="btnInfo" value="Carregar Jogo" onclick="carregar_jogo()"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </header>
 
     <script src="script.js"></script>
-     
 </body>
 </html>

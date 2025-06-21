@@ -19,7 +19,7 @@ const questions = [
     "O que ele/ela significava para você?",
     "Se você pudesse mandar uma mensagem para ela agora, o que você diria?",
     "Você se sente mais perto ou mais distante de amigos e familiares?",
-    "Você se sente mais triste, irritado, confuso?",
+    "Você se sente mais triste, irritada, confusa?",
     "Existe algo que as pessoas dizem ou fazem que não ajuda, ou até mesmo te magoa?",
     "O que você gostaria que fosse diferente para que você pudesse lidar melhor com esse momento?",
     "Você se sente confortável em falar com alguém sobre seus sentimentos?"

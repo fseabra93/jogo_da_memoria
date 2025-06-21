@@ -1,4 +1,4 @@
-function mostrar(){
+/*function mostrar(){
     document.getElementById('texto1').innerHTML = 'Preparar para cirurgia';
     document.getElementById('texto2').innerHTML = 'Controle da dor e infecção pós-operatórias';
 }
@@ -112,15 +112,13 @@ function gram(){
 
 function mostrarMensagemAlert() {
     alert("Olá! Esta é uma mensagem simples para o usuário.");
-}
+}*/
 
 function carregar_jogo() {
-    const sexoElement = document.getElementById("sexo");
-    const faixaEtariaElement = document.getElementById("faixa_etaria");
+    const sexoElement = document.getElementById("sexo"); // Referência correta ao select
 
-    // É mais seguro usar o 'value' das opções, que são os identificadores reais.
-    const sexo = sexoElement.value;
-    const faixa_etaria = faixaEtariaElement.value;
+    // Obtenha o valor selecionado do elemento sexoElement
+    const selecionar = sexoElement.value;
     
     // Supondo que você tenha uma função para mostrar a mensagem de erro/alerta na tela,
     // como a 'mostrarMensagemNaTela' que sugeri anteriormente.
@@ -128,40 +126,25 @@ function carregar_jogo() {
     const elementoFeedback = document.getElementById("feedbackMensagem"); // Adicione este elemento no seu HTML
 
     // 1. Validar se as seleções foram feitas
-    if (sexo === "" || faixa_etaria === "") {
+    if (selecionar === "invalido") { // Use "invalido" que é o valor da sua opção padrão
         if (elementoFeedback) {
-            elementoFeedback.textContent = "Por favor, selecione tanto o Sexo quanto a Faixa Etária.";
+            elementoFeedback.textContent = "Por favor, selecione um jogo.";
             elementoFeedback.style.color = "red"; // Mensagem de erro em vermelho
         } else {
-            alert("Por favor, selecione tanto o Sexo quanto a Faixa Etária.");
+            alert("Por favor, selecione um jogo."); // Fallback para alert se elementoFeedback não existir
         }
         return; // Sai da função se a seleção não for válida
     }
 
     // 2. Lógica de redirecionamento baseada nos VALUES
-    if (sexo === "masc") {
-        if (faixa_etaria === "crianca") {
-            window.location.href = "game1/index.html";
-        } else if (faixa_etaria === "adolesc") {
-            window.location.href = "game2/index.html";
-        }
-        // Não há uma condição 'invalido' para faixa etária no HTML,
-        // então não precisamos de um if para ela aqui, pois já validamos acima.
-    } else if (sexo === "fem") { // Use else if para 'fem' para garantir que apenas uma ramificação seja executada
-        if (faixa_etaria === "crianca") {
+    if (selecionar === "menina") {
             window.location.href = "game3/index.html";
-        } else if (faixa_etaria === "adolesc") {
+    } else if (selecionar === "menino"){
+            window.location.href = "game1/index.html";
+    } else if (selecionar === "garota"){
             window.location.href = "game4/index.html";
-        }
-        // Não há uma condição 'invalido' para faixa etária no HTML
-    } else {
-        // Caso algum 'sexo' inesperado seja selecionado (improvável com seu HTML atual)
-        if (elementoFeedback) {
-            elementoFeedback.textContent = "Seleção de sexo inválida.";
-            elementoFeedback.style.color = "red";
-        } else {
-            alert("Seleção de sexo inválida.");
-        }
+    } else if (selecionar === "garoto"){
+            window.location.href = "game2/index.html";
     }
 }
 
@@ -169,7 +152,6 @@ function carregar_jogo() {
 function mostrarMensagemAlert() {
     alert("Por favor, selecione uma opção válida."); // Ou uma mensagem mais específica
 }
-
 
 
 
