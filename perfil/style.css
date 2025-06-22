@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap');
+
+/* General Body Styling */
+body {
+    font-family: 'Lora', serif; /* Exemplo de fonte serifada */
+    font-size: large;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+
+    /* --- Background Image Properties --- */
+    background-image: url('background-6650672_1280.jpg'); /* Replace 'your-image-name.jpg' with your image file path */
+    background-size: cover; /* Ensures the background image covers the entire element */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Makes the background image fixed when scrolling */
+    /* ---------------------------------- */
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background: #FFF8DC;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+header h1 {
+    color: #0f3d6b;
+    font-family: "Niconne", cursive;
+
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-family: "Niconne", cursive;
+    font-size: 2.5em;
+    color: #7f8c8d;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-family: "Niconne", cursive;
+    color: #0f3d6b;
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e74c3c;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+section p {
+    font-family: "Ovo", serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+/* Specific Section Styles (Optional, for more distinct look) */
+.about-me {
+    /* background-color: #ecf0f1; */
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.passion {
+    /* background-color: #ecf0f1; */
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.memory-game {
+    /* background-color: #ecf0f1; */
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Citation Styling */
+.container p .cite {
+    font-size: 0.8em;
+    color: #7f8c8d;
+    vertical-align: super;
+}
