@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "DynaPuff", system-ui;
+    min-height: 100vh;
+   /* background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%);*/
+   /* Nova configuração de fundo */
+    background-image: url('anhtuannguyendlh-flower-7877708.jpg'); 
+    background-size: cover;       /* Faz a imagem cobrir a tela toda */
+    background-position: center;  /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem fique se repetindo */
+    background-attachment: fixed; /* Opcional: mantém o fundo fixo ao rolar a página */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* Claymorphism Container / Card */
+.clay-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 550px;
+    z-index: 10;
+}
+
+#titulo-pagina-seletor {
+    font-family: "Pacifico", cursive;
+    font-size: 4em;
+    color: #ffb74d; /* Soft clay orange */
+    text-align: center;
+    margin-bottom: 30px;
+    /* Claymorphism text effect */
+    text-shadow: 
+        3px 3px 0px #080808,
+        6px 6px 0px rgba(0, 0, 0, 0.08);
+}
+
+.clay-card {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 35px;
+    padding: 30px 30px;
+    width: 100%;
+    box-shadow: 
+        12px 12px 24px 0 rgba(130, 170, 160, 0.4),
+        inset -8px -8px 16px 0 rgba(0, 0, 0, 0.04),
+        inset 8px 8px 16px 0 rgba(255, 255, 255, 0.9);
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.clay-label {
+    font-size: 1.4em;
+    color: #00796b; /* Dark pastel teal */
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8);
+}
+
+.seletor-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    justify-content: center;
+}
+
+.seletor {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #e0f2f1; /* Pastel teal-white */
+    color: #00796b;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 15px 45px 15px 25px;
+    font-size: 1.3em;
+    font-family: "DynaPuff", system-ui;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 
+        6px 6px 12px 0 rgba(0, 0, 0, 0.08),
+        inset -6px -6px 10px 0 rgba(0, 0, 0, 0.03),
+        inset 6px 6px 10px 0 rgba(255, 255, 255, 0.9);
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2300796b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px) center;
+    background-size: 18px;
+}
+
+.seletor:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 
+        8px 10px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+.seletor:focus {
+    outline: none;
+    transform: translateY(1px) scale(0.98);
+}
+
+#btnInfo {
+    background-color: #80cbc4; /* Vibrant pastel teal */
+    color: #ffffff;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 15px 40px;
+    font-size: 1.4em;
+    font-family: "DynaPuff", system-ui;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: 
+        6px 8px 14px 0 rgba(0, 0, 0, 0.12),
+        inset -6px -6px 12px 0 rgba(0, 0, 0, 0.1),
+        inset 6px 6px 12px 0 rgba(255, 255, 255, 0.6);
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#btnInfo:hover {
+    background-color: #4db6ac;
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 
+        8px 12px 20px 0 rgba(0, 0, 0, 0.15),
+        inset -8px -8px 14px 0 rgba(0, 0, 0, 0.12),
+        inset 8px 8px 14px 0 rgba(255, 255, 255, 0.7);
+}
+
+#btnInfo:active {
+    transform: translateY(1px) scale(0.97);
+    box-shadow: 
+        3px 4px 8px 0 rgba(0, 0, 0, 0.08),
+        inset -4px -4px 8px 0 rgba(0, 0, 0, 0.08),
+        inset 4px 4px 8px 0 rgba(255, 255, 255, 0.5);
+}
+
+.clay-feedback {
+    min-height: 24px;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-align: center;
+    color: #e57373; /* soft red */
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}

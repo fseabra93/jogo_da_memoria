@@ -5,32 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seleção de Atributos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_atributos.css">
 </head>
 <body>
-    <header id="cabecalho-principal">
-        <h1 id="titulo-pagina-seletor">
-            Seleção de Atributos
-        </h1>
-        <div id="seletor-container">
-            <table>
-                <tr>
-                    <td>
-                        <select class="seletor" name="selecionar" id="sexo">
-                            <option value="invalido">Selecionar</option>
-                            <option value="menina">Menina</option>
-                            <option value="menino">Menino</option>
-                            <option value="garota">Garota</option>
-                            <option value="garoto">Garoto</option>
-                        </select>
-                    </td>
-                    <td>
-                        <input type="button" id="btnInfo" value="Carregar Jogo" onclick="carregar_jogo()"/>
-                    </td>
-                </tr>
-            </table>
+    <div class="clay-container">
+        <h1 id="titulo-pagina-seletor">Seleção de Atributos</h1>
+        
+        <div class="clay-card">
+            <div class="form-group">
+                <label for="sexo" class="clay-label">&nbsp;</label>
+                <div class="seletor-wrapper">
+                    <select class="seletor" name="selecionar" id="sexo">
+                        <option value="invalido">Selecionar</option>
+                        <option value="menina">Menina</option>
+                        <option value="menino">Menino</option>
+                        <option value="garota">Garota</option>
+                        <option value="garoto">Garoto</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button id="btnInfo" onclick="carregar_jogo()">Carregar Jogo</button>
+            
+            <!-- Elemento de feedback para erros de seleção -->
+            <div id="feedbackMensagem" class="clay-feedback"></div>
         </div>
-    </header>
+    </div>
 
     <script src="script.js"></script>
 </body>

@@ -1,0 +1,128 @@
+/* Importando as fontes divertidas e elegantes do estilo original */
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "DynaPuff", system-ui;
+    min-height: 100vh;
+    /* Mantendo o fundo original em gradiente pastel verde-água */
+    /*background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%);*/
+    
+    background-image: url('anhtuannguyendlh-flower-7877708.jpg'); 
+    background-size: cover;       /* Faz a imagem cobrir a tela toda */
+    background-position: center;  /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem fique se repetindo */
+    background-attachment: fixed; /* Opcional: mantém o fundo fixo ao rolar a página */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* Título Principal (Jogo da Memória) usando a fonte cursiva e o efeito Claymorphism */
+h1 {
+    font-family: "Pacifico", cursive;
+    font-size: 3.5em;
+    color: #ffb74d; /* Laranja pastel original */
+    text-align: center;
+    margin-bottom: 5px;
+    text-shadow: 
+        3px 3px 0px #ffe0b2,
+        6px 6px 0px rgba(0, 0, 0, 0.08);
+}
+
+/* Subtítulo (Trabalhando o Luto) no mesmo tom de verde escuro pastel */
+h2 {
+    font-size: 1.5em;
+    color: #00796b;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8);
+}
+
+/* Container que envolve a imagem e os botões, adaptando o .clay-card original */
+.content-wrapper {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 35px;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 
+        12px 12px 24px 0 rgba(130, 170, 160, 0.4),
+        inset -8px -8px 16px 0 rgba(0, 0, 0, 0.04),
+        inset 8px 8px 16px 0 rgba(255, 255, 255, 0.9);
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    z-index: 10;
+}
+
+/* Estilização da imagem de logo com bordas arredondadas e sombra suave */
+.sombra-arredondada {
+    max-width: 80%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Container dos botões em coluna */
+.buttons-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Botões Estilizados adaptados a partir do botão original #btnInfo */
+.styled-button {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #80cbc4; /* Verde-água pastel vibrante */
+    color: #ffffff;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 15px 40px;
+    font-size: 1.3em;
+    font-family: "DynaPuff", system-ui;
+    font-weight: bold;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: 
+        6px 8px 14px 0 rgba(0, 0, 0, 0.12),
+        inset -6px -6px 12px 0 rgba(0, 0, 0, 0.1),
+        inset 6px 6px 12px 0 rgba(255, 255, 255, 0.6);
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.styled-button:hover {
+    background-color: #4db6ac;
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 
+        8px 12px 20px 0 rgba(0, 0, 0, 0.15),
+        inset -8px -8px 14px 0 rgba(0, 0, 0, 0.12),
+        inset 8px 8px 14px 0 rgba(255, 255, 255, 0.7);
+}
+
+.styled-button:active {
+    transform: translateY(1px) scale(0.97);
+    box-shadow: 
+        3px 4px 8px 0 rgba(0, 0, 0, 0.08),
+        inset -4px -4px 8px 0 rgba(0, 0, 0, 0.08),
+        inset 4px 4px 8px 0 rgba(255, 255, 255, 0.5);
+}
